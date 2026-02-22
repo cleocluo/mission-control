@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T06:32:08.004Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T09:15:04.273Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
 Eric Yip
 eric@eyxl.com.au
 
@@ -14,7 +14,7 @@ Join with Google Meet: https://meet.google.com/fix-auai-iws
 Or dial: (AU) +61 2 9051 3700 PIN: 382884493#
 More phone numbers: https://tel.meet/fix-auai-iws?pin=4441413845686&hs=7
 
-Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,link:null},{summary:"Cancel Audible",start:"2026-04-07T14:00:00.000Z",end:"2026-04-08T14:00:00.000Z",location:null,description:null,link:null}],b={generatedAt:w,events:k},f=document.querySelector("#app");if(!f)throw new Error("Mission control root element not found");const $=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),o=30,c=0,T=Math.min(c/o*100,100),h=55,r=[36,38,35,42,44,48,52.5],p=140,l=40,A=Math.max(...r),g=Math.min(...r),M=r.map((t,a)=>{const i=r.length===1?0:a/(r.length-1)*p,n=A-g||1,e=l-(t-g)/n*l;return`${i},${e}`}).join(" "),u=52.5,x=70,m=Math.min(u/x*100,100),S=b.events??[],y=S.slice(0,3),L=new Intl.DateTimeFormat("en-AU",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),D=new Intl.DateTimeFormat("en-AU",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),v=D.format(new Date(b.generatedAt)),P=y.length?y.map(t=>{const a=L.format(new Date(t.start)),i=t.description?.match(/https?:\/\/[^\s<]+/i),n=t.link||i?.[0]||null;return`
+Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,link:null},{summary:"Cancel Audible",start:"2026-04-07T14:00:00.000Z",end:"2026-04-08T14:00:00.000Z",location:null,description:null,link:null}],b={generatedAt:w,events:k},f=document.querySelector("#app");if(!f)throw new Error("Mission control root element not found");const $=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),o=30,c=0,T=Math.min(c/o*100,100),h=55,r=[36,38,35,42,44,48,52.5],p=140,l=40,A=Math.max(...r),g=Math.min(...r),M=r.map((t,a)=>{const i=r.length===1?0:a/(r.length-1)*p,n=A-g||1,e=l-(t-g)/n*l;return`${i},${e}`}).join(" "),u=52.5,x=70,m=Math.min(u/x*100,100),S=b.events??[],v=S.slice(0,3),L=new Intl.DateTimeFormat("en-AU",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),D=new Intl.DateTimeFormat("en-AU",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),y=D.format(new Date(b.generatedAt)),P=v.length?v.map(t=>{const a=L.format(new Date(t.start)),i=t.description?.match(/https?:\/\/[^\s<]+/i),n=t.link||i?.[0]||null;return`
           <article class="meeting-card">
             <div>
               <p class="meeting-time">${a}</p>
@@ -52,6 +52,7 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
           <strong>${c} / ${o}</strong>
         </article>
       </div>
+      <div class="top-bar-gradient"></div>
     </header>
 
     <section class="hero-grid">
@@ -294,7 +295,7 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
     <section class="panel calendar-panel">
       <div class="panel-heading">
         <h2>Next Meetings</h2>
-        ${v?`<span class="badge badge-sync">Synced ${v}</span>`:""}
+        ${y?`<span class="badge badge-sync">Synced ${y}</span>`:""}
       </div>
       <div class="calendar-list">
         ${P}
