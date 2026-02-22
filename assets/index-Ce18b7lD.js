@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T06:19:08.200Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T06:32:08.004Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
 Eric Yip
 eric@eyxl.com.au
 
@@ -14,7 +14,7 @@ Join with Google Meet: https://meet.google.com/fix-auai-iws
 Or dial: (AU) +61 2 9051 3700 PIN: 382884493#
 More phone numbers: https://tel.meet/fix-auai-iws?pin=4441413845686&hs=7
 
-Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,link:null},{summary:"Cancel Audible",start:"2026-04-07T14:00:00.000Z",end:"2026-04-08T14:00:00.000Z",location:null,description:null,link:null}],f={generatedAt:w,events:k},b=document.querySelector("#app");if(!b)throw new Error("Mission control root element not found");const $=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),o=30,c=0,T=Math.min(c/o*100,100),h=55,r=[36,38,35,42,44,48,52.5],p=140,l=40,A=Math.max(...r),g=Math.min(...r),M=r.map((t,a)=>{const i=r.length===1?0:a/(r.length-1)*p,n=A-g||1,e=l-(t-g)/n*l;return`${i},${e}`}).join(" "),u=52.5,S=70,m=Math.min(u/S*100,100),x=f.events??[],y=x.slice(0,3),D=new Intl.DateTimeFormat("en-AU",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),P=new Intl.DateTimeFormat("en-AU",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),v=P.format(new Date(f.generatedAt)),I=y.length?y.map(t=>{const a=D.format(new Date(t.start)),i=t.description?.match(/https?:\/\/[^\s<]+/i),n=t.link||i?.[0]||null;return`
+Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,link:null},{summary:"Cancel Audible",start:"2026-04-07T14:00:00.000Z",end:"2026-04-08T14:00:00.000Z",location:null,description:null,link:null}],b={generatedAt:w,events:k},f=document.querySelector("#app");if(!f)throw new Error("Mission control root element not found");const $=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),o=30,c=0,T=Math.min(c/o*100,100),h=55,r=[36,38,35,42,44,48,52.5],p=140,l=40,A=Math.max(...r),g=Math.min(...r),M=r.map((t,a)=>{const i=r.length===1?0:a/(r.length-1)*p,n=A-g||1,e=l-(t-g)/n*l;return`${i},${e}`}).join(" "),u=52.5,x=70,m=Math.min(u/x*100,100),S=b.events??[],y=S.slice(0,3),L=new Intl.DateTimeFormat("en-AU",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),D=new Intl.DateTimeFormat("en-AU",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),v=D.format(new Date(b.generatedAt)),P=y.length?y.map(t=>{const a=L.format(new Date(t.start)),i=t.description?.match(/https?:\/\/[^\s<]+/i),n=t.link||i?.[0]||null;return`
           <article class="meeting-card">
             <div>
               <p class="meeting-time">${a}</p>
@@ -23,12 +23,17 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
             </div>
             ${n?`<a class="meeting-link" href="${n}" target="_blank" rel="noreferrer">Join</a>`:""}
           </article>
-        `}).join(""):'<p class="empty-state">No upcoming meetings scheduled.</p>';b.innerHTML=`
+        `}).join(""):'<p class="empty-state">No upcoming meetings scheduled.</p>';f.innerHTML=`
   <div class="dashboard-shell">
     <header class="top-bar">
-      <div>
-        <p class="eyebrow">${$} · Sydney</p>
-        <h1>Cluo Ops Mission Control</h1>
+      <div class="top-bar-copy">
+        <div class="brand-row">
+          <div class="logo-mark">CL</div>
+          <div>
+            <p class="eyebrow">${$} · Sydney</p>
+            <h1>Cluo Ops Mission Control</h1>
+          </div>
+        </div>
         <p class="subtitle">
           One glance view of runway, sales pressure, automation build, and spend. Designed for fast standups and solo execution.
         </p>
@@ -51,7 +56,7 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
 
     <section class="hero-grid">
       <article class="panel hero-card">
-        <div class="hero-header">
+        <div class="hero-text">
           <div class="hero-pills">
             <span>Lovable demos on deck</span>
             <span>BNI offer locked</span>
@@ -62,6 +67,16 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
           <p>
             100+ Sydney roofers sourced, 30–50 calls per day, demo reel ready. Automation track hums quietly in the background.
           </p>
+          <div class="hero-meta">
+            <span>Goal · First Lovable sale</span>
+            <span>Window · 7 days</span>
+          </div>
+        </div>
+        <div class="hero-graphic">
+          <div class="hero-bubble">
+            <span>⚡</span>
+          </div>
+          <p>Ops engaged</p>
         </div>
       </article>
       <article class="panel meters-card">
@@ -282,7 +297,7 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
         ${v?`<span class="badge badge-sync">Synced ${v}</span>`:""}
       </div>
       <div class="calendar-list">
-        ${I}
+        ${P}
       </div>
     </section>
 
