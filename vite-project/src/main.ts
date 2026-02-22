@@ -118,6 +118,7 @@ app.innerHTML = `
           <strong>${callLogged} / ${callGoal}</strong>
         </article>
       </div>
+      <div class="top-bar-gradient"></div>
     </header>
 
     <section class="hero-grid">
