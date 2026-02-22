@@ -34,7 +34,7 @@ body {
 #app {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 3rem;
+  padding: 1.75rem 1.5rem 2.5rem;
 }
 
 .dashboard-shell {
@@ -45,14 +45,14 @@ body {
 
 .top-bar {
   position: sticky;
-  top: 1rem;
+  top: 0.5rem;
   z-index: 20;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 1.75rem;
+  padding: 1.25rem 1.5rem;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(15, 23, 42, 0.05);
   border-radius: 32px;
@@ -120,14 +120,15 @@ body {
   margin: 0;
 }
 
-.hero-card .pill-row {
-  margin-top: 1.3rem;
+.hero-card .hero-pills {
   display: flex;
+  justify-content: center;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  margin-bottom: 1rem;
 }
 
-.hero-card .pill-row span {
+.hero-card .hero-pills span {
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
   background: var(--badge-bg);
@@ -149,39 +150,43 @@ body {
       var(--accent) calc(var(--value) * 1%),
       rgba(15, 23, 42, 0.08) 0
     );
-  display: grid;
-  place-items: center;
   position: relative;
 }
 
 .radial-meter::after {
   content: "";
   position: absolute;
-  inset: 16px;
+  inset: 18px;
   background: #fff;
   border-radius: 50%;
   border: 1px solid rgba(15, 23, 42, 0.05);
 }
 
-.radial-meter span,
-.radial-meter p {
-  position: relative;
-  margin: 0;
-  text-align: center;
-}
-
-.radial-meter span {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text);
+.radial-content {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
 }
 
-.radial-meter span small {
-  font-size: 0.75rem;
+.radial-content strong {
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.radial-content span {
+  font-size: 0.8rem;
   color: var(--muted);
+}
+
+.radial-caption {
+  text-align: center;
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .radial-meter.dual {

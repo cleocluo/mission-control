@@ -67,32 +67,38 @@ app.innerHTML = `
     <section class="hero-grid">
       <article class="panel hero-card">
         <div class="hero-header">
+          <div class="hero-pills">
+            <span>Lovable demos on deck</span>
+            <span>BNI offer locked</span>
+            <span>Automation-first delivery</span>
+          </div>
           <p class="eyebrow">Mission Brief</p>
           <h2>Ship the first Lovable win in 7 days</h2>
           <p>
             100+ Sydney roofers sourced, 30–50 calls per day, demo reel ready. Automation track hums quietly in the background.
           </p>
         </div>
-        <div class="pill-row">
-          <span>Lovable demos on deck</span>
-          <span>BNI offer locked</span>
-          <span>Automation-first delivery</span>
-        </div>
       </article>
       <article class="panel meters-card">
         <div>
           <p class="eyebrow">Dial Pressure</p>
           <div class="radial-meter" style="--value: ${callPercent};">
-            <span><strong>${callLogged}</strong>/<small>${callGoal}</small></span>
-            <p>Calls today</p>
+            <div class="radial-content">
+              <strong>${callLogged}</strong>
+              <span>${callGoal} target</span>
+            </div>
           </div>
+          <p class="radial-caption">Calls today</p>
         </div>
         <div>
           <p class="eyebrow">Automation Track</p>
           <div class="radial-meter dual" style="--value: ${automationPercent};">
-            <span><strong>${automationPercent}%</strong><small>Track 2</small></span>
-            <p>Industry strat → keywords</p>
+            <div class="radial-content">
+              <strong>${automationPercent}%</strong>
+              <span>Track 2</span>
+            </div>
           </div>
+          <p class="radial-caption">Industry strat → keywords</p>
         </div>
         <div>
           <p class="eyebrow">Spend Guardrail</p>
