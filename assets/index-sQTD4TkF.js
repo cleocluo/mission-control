@@ -217,9 +217,11 @@
               <span>70K stop</span>
             </div>
             <div class="gauge-track">
-              <div class="gauge-fill" style="width: ${y}%;">
-                <span>${p.toFixed(1)}K tokens</span>
-              </div>
+              <div class="gauge-fill" style="width: ${y}%;"></div>
+            </div>
+            <div class="gauge-value">
+              <strong>${p.toFixed(1)}K tokens today</strong>
+              <span>Tracking against 70K hard stop</span>
             </div>
           </div>
           <div class="sparkline">
