@@ -257,9 +257,11 @@ app.innerHTML = `
               <span>70K stop</span>
             </div>
             <div class="gauge-track">
-              <div class="gauge-fill" style="width: ${tokenPercent}%;">
-                <span>${tokenToday.toFixed(1)}K tokens</span>
-              </div>
+              <div class="gauge-fill" style="width: ${tokenPercent}%;"></div>
+            </div>
+            <div class="gauge-value">
+              <strong>${tokenToday.toFixed(1)}K tokens today</strong>
+              <span>Tracking against 70K hard stop</span>
             </div>
           </div>
           <div class="sparkline">
