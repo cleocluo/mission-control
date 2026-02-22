@@ -8,112 +8,154 @@ if (!app) {
 
 app.innerHTML = `
   <main class="dashboard">
-    <header>
+    <header class="hero">
       <div>
         <p class="eyebrow">Cluo Mission Control</p>
-        <h1>Autonomous Ops Overview</h1>
+        <h1>Ops Dashboard — 22 Feb 2026</h1>
         <p class="subtitle">
-          Live status of tasks, schedule, and priorities for Cluo. Task board shows
-          who owns what, calendar shows scheduled automations and check-ins.
+          Tactical picture of runway, sales pressure, automation build, and spend. This is the single source of truth
+          for what needs force today.
         </p>
       </div>
-      <div class="header-card">
-        <p>Current Focus</p>
-        <strong>Mission Control MVP</strong>
-        <p>Task board + schedule ? real data next.</p>
+      <div class="stat-card">
+        <div>
+          <p class="stat-label">Days to Kudo Exit</p>
+          <p class="stat-value">37</p>
+        </div>
+        <div>
+          <p class="stat-label">Sprint Week</p>
+          <p class="stat-value">3 / 9 (First Sale)</p>
+        </div>
+        <div>
+          <p class="stat-label">Calls Today</p>
+          <p class="stat-value">0 / 30</p>
+        </div>
       </div>
     </header>
 
     <section class="mission-card">
-      <h2>Mission Statement</h2>
-      <p>
-        Build a self-fixing Google ops machine: AI agents + human operators running
-        revenue, delivery, and automation 24/7.
-      </p>
-      <div class="pill-grid">
-        <span class="pill">Google consulting + software</span>
-        <span class="pill">Portal overlay</span>
-        <span class="pill">BNI-ready offer</span>
-      </div>
-    </section>
-
-    <section>
-      <h2>Task Board</h2>
-      <div class="task-board">
-        <article class="lane" data-status="todo">
-          <h3>Backlog</h3>
-          <div class="lane-body">
-            <div class="task-card">
-              <div class="task-header">
-                <span class="task-priority priority-high">HIGH</span>
-                <span class="task-owner">Karl</span>
-              </div>
-              <h4>Cold call Sydney roofers (30�50)</h4>
-            </div>
-            <div class="task-card">
-              <div class="task-header">
-                <span class="task-priority priority-medium">MEDIUM</span>
-                <span class="task-owner">Karl</span>
-              </div>
-              <h4>Document website product + script</h4>
-            </div>
-          </div>
+      <h2>Mission Pulse</h2>
+      <div class="pulse-grid">
+        <article class="pulse-tile">
+          <header>
+            <span class="badge badge-amber">Revenue Track</span>
+          </header>
+          <p>Need 100+ Sydney roofers in pipe + close first Lovable rebuild this week.</p>
         </article>
-
-        <article class="lane" data-status="doing">
-          <h3>In Progress</h3>
-          <div class="lane-body">
-            <div class="task-card">
-              <div class="task-header">
-                <span class="task-priority priority-high">HIGH</span>
-                <span class="task-owner">Cleo</span>
-              </div>
-              <h4>Build Mission Control UI</h4>
-            </div>
-            <div class="task-card">
-              <div class="task-header">
-                <span class="task-priority priority-medium">MEDIUM</span>
-                <span class="task-owner">Cleo</span>
-              </div>
-              <h4>Zapier keyword automation</h4>
-            </div>
-          </div>
+        <article class="pulse-tile">
+          <header>
+            <span class="badge badge-green">Foundation Track</span>
+          </header>
+          <p>Core files synced; documenting product + script next for hand-off readiness.</p>
         </article>
-
-        <article class="lane" data-status="done">
-          <h3>Complete</h3>
-          <div class="lane-body">
-            <p class="empty">Ready for first data sync</p>
-          </div>
+        <article class="pulse-tile">
+          <header>
+            <span class="badge badge-yellow">Automation Track</span>
+          </header>
+          <p>Industry strategy Zap mid-build; keyword workflow queued.</p>
+        </article>
+        <article class="pulse-tile">
+          <header>
+            <span class="badge badge-orange">Energy & Ops</span>
+          </header>
+          <p>Token burn creeping up — mornings reserved for deep work + dashboards.</p>
         </article>
       </div>
     </section>
 
-    <section class="schedule-card">
-      <h2>Schedule / Automations</h2>
-      <div class="schedule-list">
-        <div class="schedule-item">
-          <div>
-            <h4>Random check-in cadence</h4>
-            <p>Cleo</p>
-          </div>
-          <span>09:00 / 13:00 / 18:00</span>
+    <section class="command-stack">
+      <h2>Today’s Command Stack</h2>
+      <ol>
+        <li><strong>Deep Work (AM):</strong> Polish dashboard visuals, prep lead expansion list, tighten talk track.</li>
+        <li><strong>Dial Block (PM):</strong> 30–50 calls targeting Sydney roofers. Log objections + demos.</li>
+        <li><strong>Reset (Evening):</strong> Lock tomorrow’s target + next automation step before shutdown.</li>
+      </ol>
+    </section>
+
+    <section class="workstreams">
+      <h2>Active Workstreams</h2>
+      <div class="workstream-grid">
+        <article>
+          <p class="eyebrow">Critical</p>
+          <h3>First Website Sale</h3>
+          <p>30–50 cold calls/day until first Lovable win. Pipeline review nightly.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Build</p>
+          <h3>Mission Control UI</h3>
+          <p>Vite/Tailwind shell live — wire real data pipes + owner filters next.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Automation</p>
+          <h3>65-Day Track 2</h3>
+          <p>Industry strategy workflow → keyword enrichment → reporting hook.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="usage-card">
+      <div class="usage-header">
+        <h2>API & Token Usage</h2>
+        <span class="badge badge-alert">Monitor daily burn</span>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Today</th>
+              <th>7-day Avg</th>
+              <th>Guardrail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>OpenAI (Cleo)</td>
+              <td><strong>52.5K tokens</strong> ≈ <strong>$0.53</strong></td>
+              <td>38K tokens</td>
+              <td>Alert at 50K/day — compress prompts + reuse outputs.</td>
+            </tr>
+            <tr>
+              <td>Anthropic (Karl)</td>
+              <td>n/a today</td>
+              <td>&lt;10K tokens</td>
+              <td>Idle until first sale unlocks $200/mo budget.</td>
+            </tr>
+            <tr>
+              <td>Zapier AI Tasks</td>
+              <td>n/a</td>
+              <td>n/a</td>
+              <td>Will log once keyword automation fires (hook to Zap runs table).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="gauge">
+        <div class="gauge-labels">
+          <span>0K</span>
+          <span>50K alert</span>
+          <span>70K hard stop</span>
         </div>
-        <div class="schedule-item">
-          <div>
-            <h4>Cold call block</h4>
-            <p>Karl</p>
+        <div class="gauge-track">
+          <div class="gauge-fill" style="width: 75%">
+            <span>52.5K tokens</span>
           </div>
-          <span>13:00</span>
-        </div>
-        <div class="schedule-item">
-          <div>
-            <h4>Automation build window</h4>
-            <p>Cleo</p>
-          </div>
-          <span>16:30</span>
         </div>
       </div>
+      <ul class="usage-playbook">
+        <li>Snapshot session usage whenever blocks exceed 10K tokens.</li>
+        <li>Pause/review when daily total hits ~50K to avoid runaway billing.</li>
+        <li>Prefer local files / cached answers before re-querying models.</li>
+      </ul>
+    </section>
+
+    <section class="reminders">
+      <h2>Upcoming / Reminders</h2>
+      <ul>
+        <li>Stealth until 31 Mar (Kudo exit) — no public Cluo content yet.</li>
+        <li>Thursday nights hard stop so Friday BNI isn’t torched.</li>
+        <li>Post-first sale unlock: beefier Claude plan or website manager (funded by revenue).</li>
+      </ul>
     </section>
   </main>
 `;
