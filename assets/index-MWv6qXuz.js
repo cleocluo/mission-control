@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T09:15:04.273Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T09:21:08.413Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
 Eric Yip
 eric@eyxl.com.au
 
@@ -37,20 +37,20 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
         <p class="subtitle">
           One glance view of runway, sales pressure, automation build, and spend. Designed for fast standups and solo execution.
         </p>
-      </div>
-      <div class="top-bar-stats">
-        <article>
-          <p>Days to Kudo Exit</p>
-          <strong>37</strong>
-        </article>
-        <article>
-          <p>Sprint Week</p>
-          <strong>3 / 9 · First Sale</strong>
-        </article>
-        <article>
-          <p>Calls Logged</p>
-          <strong>${c} / ${o}</strong>
-        </article>
+        <div class="top-bar-stats">
+          <article>
+            <p>Days to Kudo Exit</p>
+            <strong>37</strong>
+          </article>
+          <article>
+            <p>Sprint Week</p>
+            <strong>3 / 9 · First Sale</strong>
+          </article>
+          <article>
+            <p>Calls Logged</p>
+            <strong>${c} / ${o}</strong>
+          </article>
+        </div>
       </div>
       <div class="top-bar-gradient"></div>
     </header>
