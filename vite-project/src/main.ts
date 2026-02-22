@@ -103,20 +103,20 @@ app.innerHTML = `
         <p class="subtitle">
           One glance view of runway, sales pressure, automation build, and spend. Designed for fast standups and solo execution.
         </p>
-      </div>
-      <div class="top-bar-stats">
-        <article>
-          <p>Days to Kudo Exit</p>
-          <strong>37</strong>
-        </article>
-        <article>
-          <p>Sprint Week</p>
-          <strong>3 / 9 · First Sale</strong>
-        </article>
-        <article>
-          <p>Calls Logged</p>
-          <strong>${callLogged} / ${callGoal}</strong>
-        </article>
+        <div class="top-bar-stats">
+          <article>
+            <p>Days to Kudo Exit</p>
+            <strong>37</strong>
+          </article>
+          <article>
+            <p>Sprint Week</p>
+            <strong>3 / 9 · First Sale</strong>
+          </article>
+          <article>
+            <p>Calls Logged</p>
+            <strong>${callLogged} / ${callGoal}</strong>
+          </article>
+        </div>
       </div>
       <div class="top-bar-gradient"></div>
     </header>
