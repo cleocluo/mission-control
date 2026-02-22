@@ -92,9 +92,14 @@ const meetingCards = upcomingMeetings.length
 app.innerHTML = `
   <div class="dashboard-shell">
     <header class="top-bar">
-      <div>
-        <p class="eyebrow">${today} · Sydney</p>
-        <h1>Cluo Ops Mission Control</h1>
+      <div class="top-bar-copy">
+        <div class="brand-row">
+          <div class="logo-mark">CL</div>
+          <div>
+            <p class="eyebrow">${today} · Sydney</p>
+            <h1>Cluo Ops Mission Control</h1>
+          </div>
+        </div>
         <p class="subtitle">
           One glance view of runway, sales pressure, automation build, and spend. Designed for fast standups and solo execution.
         </p>
@@ -117,7 +122,7 @@ app.innerHTML = `
 
     <section class="hero-grid">
       <article class="panel hero-card">
-        <div class="hero-header">
+        <div class="hero-text">
           <div class="hero-pills">
             <span>Lovable demos on deck</span>
             <span>BNI offer locked</span>
@@ -128,6 +133,16 @@ app.innerHTML = `
           <p>
             100+ Sydney roofers sourced, 30–50 calls per day, demo reel ready. Automation track hums quietly in the background.
           </p>
+          <div class="hero-meta">
+            <span>Goal · First Lovable sale</span>
+            <span>Window · 7 days</span>
+          </div>
+        </div>
+        <div class="hero-graphic">
+          <div class="hero-bubble">
+            <span>⚡</span>
+          </div>
+          <p>Ops engaged</p>
         </div>
       </article>
       <article class="panel meters-card">
