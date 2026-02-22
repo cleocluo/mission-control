@@ -1,8 +1,8 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function o(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(e){if(e.ep)return;e.ep=!0;const s=o(e);fetch(e.href,s)}})();const v=document.querySelector("#app");if(!v)throw new Error("Mission control root element not found");const m=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),n=30,d=0,f=Math.min(d/n*100,100),u=55,t=[36,38,35,42,44,48,52.5],c=140,i=40,b=Math.max(...t),g=Math.min(...t),k=t.map((h,a)=>{const o=t.length===1?0:a/(t.length-1)*c,r=b-g||1,e=i-(h-g)/r*i;return`${o},${e}`}).join(" "),p=52.5,w=70,y=Math.min(p/w*100,100);v.innerHTML=`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))r(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function o(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(e){if(e.ep)return;e.ep=!0;const s=o(e);fetch(e.href,s)}})();const y=document.querySelector("#app");if(!y)throw new Error("Mission control root element not found");const f=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),n=30,d=0,m=Math.min(d/n*100,100),g=55,t=[36,38,35,42,44,48,52.5],c=140,i=40,b=Math.max(...t),u=Math.min(...t),k=t.map((h,a)=>{const o=t.length===1?0:a/(t.length-1)*c,r=b-u||1,e=i-(h-u)/r*i;return`${o},${e}`}).join(" "),p=52.5,w=70,v=Math.min(p/w*100,100);y.innerHTML=`
   <div class="dashboard-shell">
     <header class="top-bar">
       <div>
-        <p class="eyebrow">${m} · Sydney</p>
+        <p class="eyebrow">${f} · Sydney</p>
         <h1>Cluo Ops Mission Control</h1>
         <p class="subtitle">
           One glance view of runway, sales pressure, automation build, and spend. Designed for fast standups and solo execution.
@@ -27,38 +27,44 @@
     <section class="hero-grid">
       <article class="panel hero-card">
         <div class="hero-header">
+          <div class="hero-pills">
+            <span>Lovable demos on deck</span>
+            <span>BNI offer locked</span>
+            <span>Automation-first delivery</span>
+          </div>
           <p class="eyebrow">Mission Brief</p>
           <h2>Ship the first Lovable win in 7 days</h2>
           <p>
             100+ Sydney roofers sourced, 30–50 calls per day, demo reel ready. Automation track hums quietly in the background.
           </p>
         </div>
-        <div class="pill-row">
-          <span>Lovable demos on deck</span>
-          <span>BNI offer locked</span>
-          <span>Automation-first delivery</span>
-        </div>
       </article>
       <article class="panel meters-card">
         <div>
           <p class="eyebrow">Dial Pressure</p>
-          <div class="radial-meter" style="--value: ${f};">
-            <span><strong>${d}</strong>/<small>${n}</small></span>
-            <p>Calls today</p>
+          <div class="radial-meter" style="--value: ${m};">
+            <div class="radial-content">
+              <strong>${d}</strong>
+              <span>${n} target</span>
+            </div>
           </div>
+          <p class="radial-caption">Calls today</p>
         </div>
         <div>
           <p class="eyebrow">Automation Track</p>
-          <div class="radial-meter dual" style="--value: ${u};">
-            <span><strong>${u}%</strong><small>Track 2</small></span>
-            <p>Industry strat → keywords</p>
+          <div class="radial-meter dual" style="--value: ${g};">
+            <div class="radial-content">
+              <strong>${g}%</strong>
+              <span>Track 2</span>
+            </div>
           </div>
+          <p class="radial-caption">Industry strat → keywords</p>
         </div>
         <div>
           <p class="eyebrow">Spend Guardrail</p>
           <div class="token-meter">
             <div class="token-meter-track">
-              <div class="token-meter-fill" style="width: ${y}%;"></div>
+              <div class="token-meter-fill" style="width: ${v}%;"></div>
             </div>
             <div class="token-meter-labels">
               <strong>${p.toFixed(1)}K tokens</strong>
@@ -217,7 +223,7 @@
               <span>70K stop</span>
             </div>
             <div class="gauge-track">
-              <div class="gauge-fill" style="width: ${y}%;"></div>
+              <div class="gauge-fill" style="width: ${v}%;"></div>
             </div>
             <div class="gauge-value">
               <strong>${p.toFixed(1)}K tokens today</strong>
