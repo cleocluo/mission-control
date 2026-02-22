@@ -10,7 +10,7 @@ const __dirname = dirname(__filename);
 async function resolveCalendarUrl() {
   if (process.argv[2]) return process.argv[2];
   if (process.env.CLUO_CAL_URL) return process.env.CLUO_CAL_URL;
-  const fallbackPath = resolve(__dirname, "../../secure/calendar-ics-url.txt");
+  const fallbackPath = resolve(__dirname, "../../../secure/calendar-ics-url.txt");
   try {
     const contents = await readFile(fallbackPath, "utf8");
     const trimmed = contents.trim();

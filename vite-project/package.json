@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "pull-calendar": "node scripts/pull-calendar.mjs",
+    "prebuild": "npm run pull-calendar",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
