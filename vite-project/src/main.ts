@@ -1,4 +1,5 @@
 import "./style.css";
+import calendarData from "../data/calendar.json";
 
 const app = document.querySelector<HTMLDivElement>("#app");
 
@@ -37,6 +38,56 @@ const sparklinePoints = usageTrend
 const tokenToday = 52.5;
 const tokenHardStop = 70;
 const tokenPercent = Math.min((tokenToday / tokenHardStop) * 100, 100);
+
+const calendarEvents = (calendarData.events ?? []) as {
+  summary: string;
+  start: string;
+  end: string;
+  location: string | null;
+  description: string | null;
+  link: string | null;
+}[];
+const upcomingMeetings = calendarEvents.slice(0, 3);
+const meetingFormatter = new Intl.DateTimeFormat("en-AU", {
+  weekday: "short",
+  month: "short",
+  day: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+  timeZone: "Australia/Sydney",
+});
+const syncFormatter = new Intl.DateTimeFormat("en-AU", {
+  weekday: "short",
+  hour: "numeric",
+  minute: "2-digit",
+  timeZone: "Australia/Sydney",
+});
+const lastSyncText = calendarData.generatedAt
+  ? syncFormatter.format(new Date(calendarData.generatedAt))
+  : null;
+const meetingCards = upcomingMeetings.length
+  ? upcomingMeetings
+      .map((event) => {
+        const startLabel = meetingFormatter.format(new Date(event.start));
+        const joinMatch = event.description?.match(/https?:\/\/[^\s<]+/i);
+        const joinUrl = event.link || joinMatch?.[0] || null;
+        return `
+          <article class="meeting-card">
+            <div>
+              <p class="meeting-time">${startLabel}</p>
+              <h3>${event.summary}</h3>
+              ${event.location ? `<p class="meeting-location">${event.location}</p>` : ""}
+            </div>
+            ${
+              joinUrl
+                ? `<a class="meeting-link" href="${joinUrl}" target="_blank" rel="noreferrer">Join</a>`
+                : ""
+            }
+          </article>
+        `;
+      })
+      .join("")
+  : `<p class="empty-state">No upcoming meetings scheduled.</p>`;
 
 app.innerHTML = `
   <div class="dashboard-shell">
@@ -288,6 +339,16 @@ app.innerHTML = `
             <li>Prefer local files / cached answers before re-querying models.</li>
           </ul>
         </div>
+      </div>
+    </section>
+
+    <section class="panel calendar-panel">
+      <div class="panel-heading">
+        <h2>Next Meetings</h2>
+        ${lastSyncText ? `<span class="badge badge-sync">Synced ${lastSyncText}</span>` : ""}
+      </div>
+      <div class="calendar-list">
+        ${meetingCards}
       </div>
     </section>
 

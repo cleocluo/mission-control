@@ -125,7 +125,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .hero-card .hero-pills span {
@@ -425,6 +425,61 @@ body {
   color: #4b5563;
 }
 
+.badge-sync {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.calendar-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.meeting-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 18px;
+  background: #fdfdfd;
+  align-items: center;
+}
+
+.meeting-time {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin: 0 0 0.3rem;
+}
+
+.meeting-location {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.meeting-link {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.meeting-link:hover {
+  border-color: var(--accent);
+}
+
+.empty-state {
+  margin: 0;
+  color: var(--muted);
+}
+
 .reminders ul {
   margin: 1rem 0 0;
   padding-left: 1.2rem;
@@ -461,5 +516,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.4rem;
+  }
+
+  .meeting-card {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
