@@ -1,29 +1,13 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const w="2026-02-22T09:21:08.413Z",k=[{summary:"30 min - Cluo (Eric Yip)",start:"2026-02-23T00:30:00.000Z",end:"2026-02-23T01:00:00.000Z",location:null,description:`<b>Booked by</b>
-Eric Yip
-eric@eyxl.com.au
-
-Join with Google Meet: https://meet.google.com/xdz-rtad-qrs
-Or dial: (AU) +61 3 8594 5334 PIN: 949031093#
-More phone numbers: https://tel.meet/xdz-rtad-qrs?pin=9707933403448&hs=7
-
-Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,link:null},{summary:"30 min - Cluo (truusje matthews)",start:"2026-02-24T00:30:00.000Z",end:"2026-02-24T01:00:00.000Z",location:null,description:`<b>Booked by</b>
-truusje matthews
-truusjematthews78@gmail.com
-
-Join with Google Meet: https://meet.google.com/fix-auai-iws
-Or dial: (AU) +61 2 9051 3700 PIN: 382884493#
-More phone numbers: https://tel.meet/fix-auai-iws?pin=4441413845686&hs=7
-
-Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,link:null},{summary:"Cancel Audible",start:"2026-04-07T14:00:00.000Z",end:"2026-04-08T14:00:00.000Z",location:null,description:null,link:null}],b={generatedAt:w,events:k},f=document.querySelector("#app");if(!f)throw new Error("Mission control root element not found");const $=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),o=30,c=0,T=Math.min(c/o*100,100),h=55,r=[36,38,35,42,44,48,52.5],p=140,l=40,A=Math.max(...r),g=Math.min(...r),M=r.map((t,a)=>{const i=r.length===1?0:a/(r.length-1)*p,n=A-g||1,e=l-(t-g)/n*l;return`${i},${e}`}).join(" "),u=52.5,x=70,m=Math.min(u/x*100,100),S=b.events??[],v=S.slice(0,3),L=new Intl.DateTimeFormat("en-AU",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),D=new Intl.DateTimeFormat("en-AU",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),y=D.format(new Date(b.generatedAt)),P=v.length?v.map(t=>{const a=L.format(new Date(t.start)),i=t.description?.match(/https?:\/\/[^\s<]+/i),n=t.link||i?.[0]||null;return`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const s of e)if(s.type==="childList")for(const d of s.addedNodes)d.tagName==="LINK"&&d.rel==="modulepreload"&&n(d)}).observe(document,{childList:!0,subtree:!0});function i(e){const s={};return e.integrity&&(s.integrity=e.integrity),e.referrerPolicy&&(s.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?s.credentials="include":e.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(e){if(e.ep)return;e.ep=!0;const s=i(e);fetch(e.href,s)}})();const k="2026-02-24T09:37:51.799Z",w=[{summary:"Blocked",start:"2026-02-26T00:00:00.000Z",end:"2026-02-26T03:00:00.000Z",location:null,description:null,link:null},{summary:"BNI",start:"2026-02-26T20:00:00.000Z",end:"2026-02-26T23:00:00.000Z",location:"Four Seasons Hotel Sydney, 199 George St, The Rocks NSW 2000, Australia",description:null,link:null},{summary:"Blocked",start:"2026-02-27T00:00:00.000Z",end:"2026-02-27T03:00:00.000Z",location:null,description:null,link:null},{summary:"Cancel Audible",start:"2026-04-07T14:00:00.000Z",end:"2026-04-08T14:00:00.000Z",location:null,description:null,link:null}],f={generatedAt:k,events:w},b=document.querySelector("#app");if(!b)throw new Error("Mission control root element not found");const $=new Intl.DateTimeFormat("en-AU",{weekday:"long",day:"numeric",month:"short"}).format(new Date),o=30,c=0,T=Math.min(c/o*100,100),g=55,r=[36,38,35,42,44,48,52.5],p=140,l=40,S=Math.max(...r),h=Math.min(...r),A=r.map((a,t)=>{const i=r.length===1?0:t/(r.length-1)*p,n=S-h||1,e=l-(a-h)/n*l;return`${i},${e}`}).join(" "),u=52.5,D=70,m=Math.min(u/D*100,100),L=f.events??[],v=L.slice(0,3),M=new Intl.DateTimeFormat("en-AU",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),x=new Intl.DateTimeFormat("en-AU",{weekday:"short",hour:"numeric",minute:"2-digit",timeZone:"Australia/Sydney"}),y=x.format(new Date(f.generatedAt)),I=v.length?v.map(a=>{const t=M.format(new Date(a.start)),i=a.description?.match(/https?:\/\/[^\s<]+/i),n=a.link||i?.[0]||null;return`
           <article class="meeting-card">
             <div>
-              <p class="meeting-time">${a}</p>
-              <h3>${t.summary}</h3>
-              ${t.location?`<p class="meeting-location">${t.location}</p>`:""}
+              <p class="meeting-time">${t}</p>
+              <h3>${a.summary}</h3>
+              ${a.location?`<p class="meeting-location">${a.location}</p>`:""}
             </div>
             ${n?`<a class="meeting-link" href="${n}" target="_blank" rel="noreferrer">Join</a>`:""}
           </article>
-        `}).join(""):'<p class="empty-state">No upcoming meetings scheduled.</p>';f.innerHTML=`
+        `}).join(""):'<p class="empty-state">No upcoming meetings scheduled.</p>';b.innerHTML=`
   <div class="dashboard-shell">
     <header class="top-bar">
       <div class="top-bar-copy">
@@ -93,9 +77,9 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
         </div>
         <div>
           <p class="eyebrow">Automation Track</p>
-          <div class="radial-meter dual" style="--value: ${h};">
+          <div class="radial-meter dual" style="--value: ${g};">
             <div class="radial-content">
-              <strong>${h}%</strong>
+              <strong>${g}%</strong>
               <span>Track 2</span>
             </div>
           </div>
@@ -280,7 +264,7 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
                   <stop offset="100%" stop-color="#f97316" />
                 </linearGradient>
               </defs>
-              <polyline points="${M}" fill="none" stroke="url(#trendGradient)" stroke-width="3" />
+              <polyline points="${A}" fill="none" stroke="url(#trendGradient)" stroke-width="3" />
             </svg>
           </div>
           <ul class="usage-playbook">
@@ -298,7 +282,7 @@ Learn more about Meet at: https://support.google.com/a/users/answer/9282720`,lin
         ${y?`<span class="badge badge-sync">Synced ${y}</span>`:""}
       </div>
       <div class="calendar-list">
-        ${P}
+        ${I}
       </div>
     </section>
 
