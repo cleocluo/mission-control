@@ -1,14 +1,6 @@
 {
-  "generatedAt": "2026-02-24T01:00:10.155Z",
+  "generatedAt": "2026-02-24T09:32:45.831Z",
   "events": [
-    {
-      "summary": "Blocked",
-      "start": "2026-02-23T21:15:00.000Z",
-      "end": "2026-02-24T01:30:00.000Z",
-      "location": null,
-      "description": null,
-      "link": null
-    },
     {
       "summary": "Blocked",
       "start": "2026-02-26T00:00:00.000Z",
